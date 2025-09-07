@@ -9,6 +9,9 @@ class EscuelaDAO:
 
     def listar(self):
         return self.conexion.ejecutarsinparametros("sp_listar_escuela")
+    
+    def obtener(self, id_escuela):
+        return self.conexion.ejecutar("sp_obtener_escuela", [id_escuela])
 
     def cerrar(self):
         self.conexion.cerrar()

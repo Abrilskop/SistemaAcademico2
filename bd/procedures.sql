@@ -63,6 +63,17 @@ BEGIN
 END$$
 DELIMITER ;
 
+DROP PROCEDURE IF EXISTS sp_obtener_escuela;
+DELIMITER $$
+
+CREATE PROCEDURE sp_obtener_escuela(
+    IN id_escuela INT
+)
+BEGIN
+    SELECT * FROM escuela WHERE id_escuela = id_escuela;
+END$$
+DELIMITER ;
+
 -- Procedimientos para Estudiante
 DROP PROCEDURE IF EXISTS sp_obtener_estudiante;
 DELIMITER $$

@@ -21,3 +21,7 @@ def listar_escuela():
     data=servicios.listar()
     return jsonify(data)
 
+@escuela_bp.route('/api/escuela<int:id_escuela>', methods=['POST'])
+def obtener_curso(id_curso):
+    data = servicios.obtener(id_curso)
+    return jsonify(data)

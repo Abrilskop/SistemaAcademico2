@@ -10,6 +10,9 @@ class EscuelaService:
 
     def listar(self):
         return self.escuelaDAO.listar()
+    
+    def obtener(self, id_escuela):
+        return self.escuelaDAO.obtener(id_escuela)
 
     def cerrar(self):
         self.escuelaDAO.cerrar()
